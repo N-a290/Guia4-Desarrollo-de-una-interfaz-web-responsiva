@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Resolución de Problemas | Impresión 3D</title>
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Encabezado y Menú de Navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo">PrintFix 3D</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#buscador">Buscar Error</a></li>
+                    <li><a href="#errores">Guía de Fallos</a></li>
+                    <li><a href="#contacto">Reportar Falla</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Inicio / Hero -->
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h2>Soluciones Rápidas para Impresión 3D</h2>
+                <p>Identifica y corrige fallas comunes en tus piezas impresas de manera sencilla y estructurada.</p>
+                <a href="#errores" class="btn">Explorar Errores</a>
+            </div>
+        </section>
+
+        <!-- Sección Buscador de Errores -->
+        <section id="buscador" class="search-section container">
+            <h3>¿Qué problema tiene tu impresión?</h3>
+            <p>Utiliza nuestro buscador rápido para filtrar el error que estás experimentando:</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Ej: warping, under-extrusion, hilos, capas...">
+            </div>
+        </section>
+
+        <!-- Sección de Tarjetas de Errores (Implementación con CSS Grid) -->
+        <section id="errores" class="projects container">
+            <h3>Errores Más Frecuentes</h3>
+            <div class="projects-grid">
+
+                <!-- Error 1 -->
+                <article class="card">
+                    <!-- Imagen real incrustada desde la carpeta img -->
+                    <img src="img/subextrusion.jpg"
+                        alt="Primer plano de pieza con sub-extrusión, mostrando huecos entre capas" class="card-image">
+                    <h4>Sub-extrusión (Under-extrusion)</h4>
+                    <p><strong>Causa:</strong> Falta de flujo de material o atasco parcial en la boquilla.</p>
+                    <p class="solution"><strong>Solución:</strong> Revisa la temperatura de impresión y limpia el
+                        extrusor.</p>
+                    <a href="#" class="btn-card">Ver Guía Completa</a>
+                </article>
+
+                <!-- Error 2 -->
+                <article class="card">
+                    <!-- Imagen real incrustada desde la carpeta img -->
+                    <img src="img/warping.jpg"
+                        alt="Esquina de cubo naranja levantándose de la cama de impresión por warping"
+                        class="card-image">
+                    <h4>Deformación (Warping)</h4>
+                    <p><strong>Causa:</strong> Desprendimiento de las esquinas por enfriamiento rápido.</p>
+                    <p class="solution"><strong>Solución:</strong> Incrementa la temperatura de la cama y usa adhesivo.
+                    </p>
+                    <a href="#" class="btn-card">Ver Guía Completa</a>
+                </article>
+
+                <!-- Error 3 -->
+                <article class="card">
+                    <!-- Imagen real incrustada desde la carpeta img -->
+                    <img src="img/encordado.jpg"
+                        alt="Hilos finos de plástico azul conectando dos pilares, indicando encordado"
+                        class="card-image">
+                    <h4>Encordado (Stringing / Hilos)</h4>
+                    <p><strong>Causa:</strong> Retracción insuficiente o temperatura muy alta.</p>
+                    <p class="solution"><strong>Solución:</strong> Aumenta la distancia y velocidad de retracción en
+                        Cura.</p>
+                    <a href="#" class="btn-card">Ver Guía Completa</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección de Contacto / Reportar nuevo error (Elemento interactivo) -->
+        <section id="contacto" class="contact container">
+            <h3>¿Tienes un error diferente?</h3>
+            <p>Compártelo con nosotros para analizarlo y agregarlo a la base de conocimiento.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción del Problema y Configuración:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required
+                        placeholder="Describe qué filamento usas, temperatura y qué le pasa a la pieza..."></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Reporte</button>
+            </form>
+        </section>
+    </main>
+
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 - Guía de Resolución de Problemas de Impresión 3D. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
